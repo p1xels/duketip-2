@@ -10,7 +10,10 @@ def findSimilarity(iLike, userLikes):
     # Calculate the similarity
     userSimilarity = similarityAnd.sum() / float(similarityOr.sum())
 
-    if np.array_equal(iLike,userLikes): return 0 # no exact matches
+    if np.array_equal(iLike,userLikes):
+        return 0    # no exact matches
+    if userSimilarity > 0.9:
+        return 0 # honestly this is suspicious enough that im not going to allow it
     # Return the index of the user which is the best match
     return userSimilarity
 
