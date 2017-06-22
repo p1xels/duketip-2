@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-import pandas as pnd
-import numpy as np
-
-########################################################
-# These functions will be used in Phase 3 (skip for now)
-########################################################
 
 def findSimilarity(iLike, userLikes):
     # Create an And similarity
