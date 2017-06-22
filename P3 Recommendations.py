@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import numpy as np
+import pandas as pnd
 
 def findSimilarity(iLike, userLikes):
     # Create an And similarity
@@ -162,4 +164,12 @@ processLikes(iLike)
 # Note: I recommend having them select movies by ID since the titles are really long.
 # You can just assume they have a list of movies somewhere so they already know what numbers to type in.
 # If you'd like to give them options though, that would be a cool bonus project if you finish early.
-
+while True:
+    try:
+        input = raw_input('Input comma seperated list of movies: ')
+        input = [int(n) for n in input.split(',').strip()]
+        break
+    except ValueError:
+        print "Not correct input."
+        continue
+processLikes(input)
