@@ -158,7 +158,7 @@ processLikes(iLike)
 # User Similiarity: 0.170731707317
 iLike = [ 79,  96,  98, 168, 173, 176,194, 318, 357, 427, 603, 1]
 processLikes(iLike)
-
+print "\n\n\n"+"-"*50+"\n"
 # If your code completes the above recommendations properly, you're ready for the last part,
 # allow the user to select any number of movies that they like and then give them recommendations.
 # Note: I recommend having them select movies by ID since the titles are really long.
@@ -167,7 +167,7 @@ processLikes(iLike)
 while True:
     try:
         input = raw_input('Input comma seperated list of movies: ')
-        input = [int(n) for n in input.split(',').strip()]
+        input = [int(n.strip()) for n in input.split(',')]
         break
     except ValueError:
         print "Not correct input."
